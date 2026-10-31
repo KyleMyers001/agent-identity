@@ -1,0 +1,27 @@
+{
+  "name": "agent-identity",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One persistent global agent identity for Pi, with bundled personas for BB and the terminal.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyleMyers001/agent-identity.git"
+  },
+  "files": ["index.ts", "store.ts", "agents/", "README.md"],
+  "engines": { "node": ">=24" },
+  "pi": { "extensions": ["./index.ts"] },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm test && npm run typecheck"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.4.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
